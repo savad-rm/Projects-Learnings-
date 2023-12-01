@@ -1,0 +1,4 @@
+python version error-requires lower version of python for the installation of tensorflow.
+
+
+video link-"https://youtu.be/AWvsXxDtEkU?si=ef2JZ9iucquQvt8v"

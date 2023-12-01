@@ -1,0 +1,29 @@
+To-Do:-
+Razorpay
+Firebase
+
+django react integration
+
+
+
+Hosting:
+Vercel-not working properly
+Gmail-hstrm404@gmail.com,pass-hstrm@server101
+Firebase-https://youtu.be/gtcUIQNhgyQ?si=OXxSZlS0FD-eaLF_
+Pythonanywhere:-
+     Mail:hstrm404@gmail
+     Site:https://www.pythonanywhere.com/user/savadrm/
+     applink:https://savadrm.pythonanywhere.com/
+     link:"https://youtu.be/xtnUwvjOThg?si=LRxwQKxDPSI8OSgO"
+Render:-https://www.youtube.com/watch?v=AgTr5mw4zdI
+
+Payment:hstrm404@gmail.com
+Razorpay-https://youtu.be/SFHbcs-lSio?si=DM0ild1Ix6NzzRF9 , Djangointegration- https://youtu.be/3jUw-CFcouY?si=N9A068ofRzViV83A
+Paytm-https://youtu.be/cdtPcTIuazI?si=628siEUSkyPVtqxc
+Instamojo
+
+
+
+
+
+

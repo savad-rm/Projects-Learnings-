@@ -1,0 +1,17 @@
+<!-- templates/vending_machine/admin_dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <p>Welcome, {{ user.username }}!</p>
+    <a href="{% url 'add_product' %}">Add Product</a>
+    <a href="{% url 'admin_logout' %}">Logout</a>
+</body>
+</html>
