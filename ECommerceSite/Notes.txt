@@ -8,13 +8,17 @@ django react integration
 
 Hosting:
 Vercel-not working properly
+
 Gmail-hstrm404@gmail.com,pass-hstrm@server101
+
 Firebase-https://youtu.be/gtcUIQNhgyQ?si=OXxSZlS0FD-eaLF_
+
 Pythonanywhere:-
      Mail:hstrm404@gmail
      Site:https://www.pythonanywhere.com/user/savadrm/
      applink:https://savadrm.pythonanywhere.com/
      link:"https://youtu.be/xtnUwvjOThg?si=LRxwQKxDPSI8OSgO"
+
 Render:-https://www.youtube.com/watch?v=AgTr5mw4zdI
 
 Payment:hstrm404@gmail.com
@@ -23,6 +27,10 @@ Paytm-https://youtu.be/cdtPcTIuazI?si=628siEUSkyPVtqxc
 Instamojo
 
 
+
+rzp_test_7kPo1SLPf8JLM2
+
+s3ZK5qrR1Vyl9LPldjAm3Kru
 
 
 
