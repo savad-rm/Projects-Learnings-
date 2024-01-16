@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juice Vending Machine</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #juice-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .juice-item {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .juice-item:hover {
+            transform: scale(1.05);
+        }
+
+        .juice-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .juice-item p {
+            margin: 8px 0;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 50px;
+            text-align: center;
+            margin: 0 5px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        #cart {
+            border: 1px solid #333;
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        #cart h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        #cart-items {
+            list-style: none;
+            padding: 0;
+        }
+
+        #cart-items li {
+            margin-bottom: 5px;
+        }
+
+        #total-amount {
+            font-weight: bold;
+        }
+
+        button.cart-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button.cart-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div id="juice-container">
+    <!-- Juice items dynamically generated here -->
+</div>
+
+<div id="cart">
+    <h2>Shopping Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total Amount: $<span id="total-amount">0.00</span></p>
+    <button onclick="goToCart()">Go to Cart</button>
+</div>
+
+<script>
+    // Sample juice data (replace this with actual data from your server)
+    const juices = [
+        { id: 1, name: 'Orange Juice', price: 2.50 },
+        { id: 2, name: 'Apple Juice', price: 3.00 },
+        // Add more juice items as needed
+    ];
+
+    // Initialize cart
+    const cart = [];
+
+    // Function to render juice items
+    function renderJuices() {
+        const juiceContainer = document.getElementById('juice-container');
+        juiceContainer.innerHTML = '';
+
+        juices.forEach(juice => {
+            const juiceItem = document.createElement('div');
+            juiceItem.className = 'juice-item';
+            juiceItem.innerHTML = `
+                <img src="juice-image-${juice.id}.jpg" alt="${juice.name}">
+                <p>${juice.name}</p>
+                <p>Price: $${juice.price.toFixed(2)}</p>
+                <label for="quantity-${juice.id}">Quantity:</label>
+                <input type="number" id="quantity-${juice.id}" min="1" value="1">
+                <button onclick="addToCart(${juice.id})">Add to Cart</button>
+            `;
+            juiceContainer.appendChild(juiceItem);
+        });
+    }
+
+    // Function to add item to the cart and send data to Wemos module
+    function addToCart(juiceId) {
+        const quantity = parseInt(document.getElementById(`quantity-${juiceId}`).value);
+        const selectedJuice = juices.find(juice => juice.id === juiceId);
+
+        if (selectedJuice) {
+            const existingItem = cart.find(item => item.id === juiceId);
+
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cart.push({ id: juiceId, name: selectedJuice.name, price: selectedJuice.price, quantity });
+            }
+
+            // Send data to Wemos module
+            sendToWemos(juiceId, quantity);
+
+            updateCart();
+        }
+    }
+
+    // Function to send data to the Wemos module
+    function sendToWemos(juiceId, quantity) {
+        // Assuming you have a function to make an AJAX request to Wemos module
+        // Replace this with your actual implementation
+        const xhr = new XMLHttpRequest();
+        const url = `http://wemos-module-ip:port/data`; // Replace with your Wemos module endpoint
+
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        const data = JSON.stringify({ juiceId, quantity });
+
+        xhr.send(data);
+    }
+
+    // Function to update the cart display
+    function updateCart() {
+        const cartItemsElement = document.getElementById('cart-items');
+        const totalAmountElement = document.getElementById('total-amount');
+
+        cartItemsElement.innerHTML = '';
+        let totalAmount = 0;
+
+        cart.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${item.name} x${item.quantity} - $${(item.price * item.quantity).toFixed(2)}`;
+            cartItemsElement.appendChild(listItem);
+            totalAmount += item.price * item.quantity;
+        });
+
+        totalAmountElement.textContent = totalAmount.toFixed(2);
+    }
+
+    // Function to go to the cart and update it
+    function goToCart() {
+        updateCart(); // Update the cart when "Go to Cart" is clicked
+        // Additional logic for navigating to the cart page or initiating checkout can be added here
+        alert("Navigate to the cart page or initiate checkout process!");
+    }
+
+    // Initial rendering
+    renderJuices();
+</script>
+
+</body>
+</html>

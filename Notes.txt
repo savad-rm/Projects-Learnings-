@@ -1,32 +1,54 @@
-temp tocken for gothub access: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
-
-
 Harvard CS50’s Artificial Intelligence with Python – Full University Course-https://youtu.be/5NgNicANyqM?si=fgWun68W5VEy_i1I
 
-Javascript playlist-https://youtube.com/playlist?list=PLjwm_8O3suyOgDS_Z8AWbbq3zpCmR-WE9&si=BT7TpEtYdWIvzzhD
 
-Django playlist-https://youtube.com/playlist?list=PLu0W_9lII9ah7DDtYtflgwMwpT3xmjXY9&si=KFrGaWJiyEcmvWmL
+Python:----
 
-Python game devolopment-https://youtube.com/playlist?list=PLu0W_9lII9ailUQcxEPZrWgDoL36BtPYb&si=A0fjQ9UoCvDlYQyv
+    Django playlist-https://youtube.com/playlist?list=PLu0W_9lII9ah7DDtYtflgwMwpT3xmjXY9&si=KFrGaWJiyEcmvWmL
 
-NodeJS Playlist-https://youtube.com/playlist?list=PLY-ecO2csVHd8R8sg-4vhN2BzZQLxIZO9&si=xS6hpplhaNyZyZsK
-free python course-real.discount
+    game devolopment-https://youtube.com/playlist?list=PLu0W_9lII9ailUQcxEPZrWgDoL36BtPYb&si=A0fjQ9UoCvDlYQyv
 
-Javascript:https://youtu.be/GCggAhvOSrk?si=dlizUhHTUAdKW5mH
+    free python course-real.discount
+ 
+    kafka-https://youtu.be/ZJJHm_bd9Zo?si=UYbZR84_VE_vdxf-
+
+Javascript:---
+
+    playlist-https://youtube.com/playlist?list=PLjwm_8O3suyOgDS_Z8AWbbq3zpCmR-WE9&si=BT7TpEtYdWIvzzhD
+
+    NodeJS Playlist-https://youtube.com/playlist?list=PLY-ecO2csVHd8R8sg-4vhN2BzZQLxIZO9&si=xS6hpplhaNyZyZsK
+
+    Javascript:https://youtu.be/GCggAhvOSrk?si=dlizUhHTUAdKW5mH
 
 Youtube-Dave gray,Code with Harry
 
+Learing & development:
+1, Lambda, Sagemaker, Sagemaker Canvas, Sagemaker Notebook, AWS Glue, 
+2, Amazon S3, Dynamo DB, AWS Marketplace,  AWS Step Functions
+3, Amazon QuickSight, Apache Spark, Kafka,
+
 Portfolio-
 
-for projects with source code-codeastro.com
-for websites -appypie.com
-certifications-alison.com
+Websites:--
+      for projects with source code-codeastro.com
+      for websites -appypie.com
+      certifications-alison.com
+      freecodecamp
+      https://www.real.discount/
+      programminghub
+      alison
+      
+
+Practice:--
+      codechef
+      leetcode
+      hackerrank
+      hackerearth
 
 
 Servers:
 zesto
 firebase
-iinfinityfree
+infinityfree
 render.com
 netifly
 
@@ -42,12 +64,7 @@ Loki Thyagu
 VDj Goku
 
 
+8138009891 jap.avodha.org avodhaofficialmalayalm
 
 
 
-
-Mindfulness in the Workplace
-
-In the fast-paced and often demanding landscape of the modern workplace, the concept of mindfulness has gained prominence as a transformative approach to enhance focus, well-being, and overall productivity. Mindfulness, rooted in ancient contemplative practices, involves cultivating a heightened awareness of the present moment without judgment. Integrating mindfulness into the workplace goes beyond a trendy buzzword; it represents a strategic investment in the mental and emotional health of employees.
-
-At its core, mindfulness in the workplace encourages individuals to bring their full attention to the tasks at hand, promoting a state of heightened awareness and engagement. This practice involves acknowledging and accepting the current moment, irrespective of external pressures or distractions.
